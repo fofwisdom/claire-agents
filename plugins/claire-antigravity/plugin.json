@@ -1,0 +1,21 @@
+{
+  "name": "claire-antigravity",
+  "version": "0.1.0",
+  "description": "Antigravity plugin bundle for OAuth 2.1 MCP connection, isolated source extraction, and knowledge graph queries.",
+  "license": "MIT",
+  "author": {
+    "name": "Claire Bible"
+  },
+  "client_id": "antigravity",
+  "required_scopes": [
+    "readonly",
+    "write"
+  ],
+  "files": [
+    "mcp_config.json.tmpl",
+    "rules/AGENTS.md",
+    "agents/claire-extractor.md",
+    "skills/claire-extract/SKILL.md",
+    "skills/claire-query/SKILL.md"
+  ]
+}

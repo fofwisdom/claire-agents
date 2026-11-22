@@ -5,6 +5,11 @@
       "client_id": "antigravity",
       "files": [
         {
+          "path": "README.md",
+          "sha256": "ec15bdc6fd909a6ac91f859ad1d7b48537b8d8058a84ff96843db83f4b93f48d",
+          "size": 1591
+        },
+        {
           "path": "agents/claire-extractor.md",
           "sha256": "d10aac3f7f8ca01ada1c351e66c781aa29c4dae572d1d3df2374c5a40e01e912",
           "size": 6708
@@ -16,8 +21,8 @@
         },
         {
           "path": "plugin.json",
-          "sha256": "7ef5a0c49685aa977239134356e1f6a4bde8d274766216dc93be131fa8e56edf",
-          "size": 518
+          "sha256": "4f63c3183bcef7cc15e961993af78e9cc655781948349c267234005dff00c665",
+          "size": 780
         },
         {
           "path": "rules/AGENTS.md",
@@ -42,20 +47,20 @@
         "write"
       ],
       "target": "antigravity",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "client_id": "claude",
       "files": [
         {
           "path": ".claude-plugin/plugin.json",
-          "sha256": "6bf41c720eff5328aac0a3cfcff4bcc55b3f6ad6b2b4b1ede77b947172d89100",
+          "sha256": "f705b799be94018dc8e0a3401ac8848ef91bbe6d78051f382c53089c756b72f0",
           "size": 426
         },
         {
           "path": "README.md",
-          "sha256": "e0c0184f58e2dc72015bf6a8e30b96136a3d007ea373e1ee11063070904de9de",
-          "size": 1391
+          "sha256": "ae1dd91524e2ab7f50472a5e49793561f3730493ff6d15d0c690fc03944e21db",
+          "size": 1751
         },
         {
           "path": "agents/claire-extractor.md",
@@ -80,9 +85,9 @@
         "write"
       ],
       "target": "claude",
-      "version": "0.1.0"
+      "version": "0.1.1"
     }
   ],
   "repo": "fofwisdom/claire-agents",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

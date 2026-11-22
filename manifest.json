@@ -11,8 +11,8 @@
         },
         {
           "path": "agents/claire-extractor.md",
-          "sha256": "8f03e8c0963c8e055a8506caafc0f7eb1778d6e8fd9bf2880e5a4ac166bd0a08",
-          "size": 6960
+          "sha256": "2b152f73031f10c9351c5aaeef678c20c0a5ed6c8a23ae877605cacadeb25e5b",
+          "size": 6596
         },
         {
           "path": "assets/logo.svg",
@@ -26,13 +26,13 @@
         },
         {
           "path": "rules/AGENTS.md",
-          "sha256": "b27d6baf007ade3344f618160e0ed6742e150e9697469b89a438ec661df6dd97",
-          "size": 5867
+          "sha256": "caf33f584a97ab9d0b96c73cb6c28c934b882ba9dfc31b7dc8e38b93aee31efb",
+          "size": 5727
         },
         {
           "path": "skills/claire-ingest/SKILL.md",
-          "sha256": "1a6296ef26e0c2b60a88ba74913e637357645c4dae4dad371f4e63c6f168b8b9",
-          "size": 3804
+          "sha256": "b994bb21881c584914c47ead4662c07f5e9269b2f330105870737085314c252e",
+          "size": 4153
         },
         {
           "path": "skills/claire-query/SKILL.md",
@@ -65,8 +65,8 @@
         },
         {
           "path": "agents/extractor.md",
-          "sha256": "fc9572bc3dd52eadf4414ab5e05ecf2bad2ed3a7a42ede80994e778cbc097b78",
-          "size": 6907
+          "sha256": "fa307fed44b25b102d747057496bbad4349c3f720d45a20ba17c338b341c9fe6",
+          "size": 6543
         },
         {
           "path": "hooks/hooks.json",
@@ -80,8 +80,8 @@
         },
         {
           "path": "skills/ingest/SKILL.md",
-          "sha256": "2833a6f859bd72a119878c12b63427434fdbcd7558948c39a4fb4458b9541565",
-          "size": 4413
+          "sha256": "3f74ef2e4fa28899f9daeed44a4d2d8fe44aab49f1f7e9278233c882f8cab0a0",
+          "size": 4762
         },
         {
           "path": "skills/query/SKILL.md",

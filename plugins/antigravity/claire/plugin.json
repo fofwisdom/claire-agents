@@ -1,7 +1,7 @@
 {
   "name": "claire",
   "displayName": "Claire Bible",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Antigravity plugin for direct URL/document ingest, isolated source extraction, and knowledge graph queries over the global claire MCP server.",
   "logo": "assets/logo.svg",
   "author": {
@@ -10,9 +10,8 @@
   "homepage": "https://github.com/fofwisdom/claire-agents#antigravity",
   "repository": "https://github.com/fofwisdom/claire-agents",
   "suggestedPrompts": [
-    "URL이나 문서를 Claire Bible에 바로 저장·추출해 줘 (Save and extract a URL or document)",
-    "로컬 문서 파일(PDF/DOCX/MD)을 Claire Bible에 저장해 줘 (Stage and extract a document file)",
-    "대기 중인 Claire Bible 자료를 안전하게 추출해 줘 (Extract pending Claire Bible sources)",
+    "이 URL을 Claire Bible에 바로 저장·추출해 줘 (Save and extract a URL)",
+    "로컬 문서 파일(PDF/DOCX/MD)을 Claire Bible에 저장·추출해 줘 (Stage and extract a local document file)",
     "내 Claire Bible 지식 그래프에서 관련 주제를 검색해 줘 (Search my Claire Bible knowledge graph)"
   ]
 }

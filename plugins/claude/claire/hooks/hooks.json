@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "grep -Eq '\"agent_type\" *: *\"claire:extractor\"' && exit 0; echo 'Claire Bible: extract_read is allowed only in the claire:extractor subagent. Use /claire:extract, or give the document_id to claire:extractor.' >&2; exit 2"
+            "command": "grep -Eq '\"agent_type\" *: *\"claire:extractor\"' && exit 0; echo 'Claire Bible: extract_read is allowed only in the claire:extractor subagent. Use /claire:ingest, or give the document_id to claire:extractor.' >&2; exit 2"
           }
         ]
       }

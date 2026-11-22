@@ -21,7 +21,7 @@ Antigravity가 사용자 운영체제에 맞춰 `~/.gemini/config/plugins/claire
 1. Claire Bible **`/settings/mcp`** 페이지의 **공식 에이전트 마켓플레이스 (GitHub)** 카드에서 **`Antigravity 빠른 설치 문구`** 옆 **복사** 버튼을 누릅니다.
    - GitHub에서 바로 시작하려면 아래 문구에서 `<내-Claire-서버-주소>`만 본인 서버 주소로 바꿔 복사하세요:
    ```text
-   https://github.com/fofwisdom/claire-agents 최신 Release에서 claire-antigravity-v0.2.0.zip을 받아
+   https://github.com/fofwisdom/claire-agents 최신 Release에서 claire-antigravity-v0.3.0.zip을 받아
    SHA256SUMS 검증 후 ~/.gemini/config/plugins/claire에 설치하고, 기존 설정을 보존하면서
    ~/.gemini/config/mcp_config.json에 claire (https://<내-Claire-서버-주소>/mcp)을 병합해 줘.
    ```
@@ -38,7 +38,7 @@ Antigravity가 사용자 운영체제에 맞춰 `~/.gemini/config/plugins/claire
 에이전트에게 파일 작업을 맡기지 않고 직접 내려받아 적용하고 싶을 때 사용합니다.
 
 ### 1단계: 플러그인 `.zip`과 `mcp_config.json` 내려받기
-1. [GitHub Releases 페이지](https://github.com/fofwisdom/claire-agents/releases/latest)에서 **`claire-antigravity-v0.2.0.zip`** 파일을 내려받아 압축을 풉니다. (**`claire`** 폴더가 만들어집니다.)
+1. [GitHub Releases 페이지](https://github.com/fofwisdom/claire-agents/releases/latest)에서 **`claire-antigravity-v0.3.0.zip`** 파일을 내려받아 압축을 풉니다. (**`claire`** 폴더가 만들어집니다.)
 2. Claire Bible **`/settings/mcp`** 페이지에서 **`서버 연결 파일 내려받기`** 버튼을 눌러 **`mcp_config.json`** 파일을 내려받습니다.
 
 ### 2단계: `.gemini/config` 폴더에 넣기
@@ -102,7 +102,7 @@ URL·외부 문서를 맡길 때 Antigravity 본체는 원문을 브라우저로
 
 ## 자주 묻는 질문 (FAQ)
 
-- **Q. 플러그인을 새 버전(`v0.2.0`)으로 업데이트해도 서버 URL이나 다른 MCP 설정이 유지되나요?**
+- **Q. 플러그인을 새 버전(`v0.3.0`)으로 업데이트해도 서버 URL이나 다른 MCP 설정이 유지되나요?**
   - 네. 전역 `~/.gemini/config/mcp_config.json`의 `claire` 설정과 플러그인 폴더(`plugins/claire/`)가 분리되어 있어 플러그인을 덮어써도 URL과 기존 다른 MCP 서버가 그대로 보존됩니다.
 - **Q. `Claire Bible`이 `Plugins` 목록에 안 보여요.**
   - 폴더가 `plugins/claire/claire/plugin.json`처럼 이중 중첩되지 않았는지 확인하세요. `plugins/claire/plugin.json` 위치여야 정상 인식됩니다.
@@ -116,15 +116,15 @@ URL·외부 문서를 맡길 때 Antigravity 본체는 원문을 브라우저로
 
 1. 아카이브 및 체크섬 검증:
    ```bash
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.2.0/claire-antigravity-v0.2.0.tar.gz"
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.2.0/SHA256SUMS"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.3.0/claire-antigravity-v0.3.0.tar.gz"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.3.0/SHA256SUMS"
    sha256sum -c SHA256SUMS --ignore-missing
    ```
    *(macOS에서는 `shasum -a 256 -c SHA256SUMS --ignore-missing` 사용)*
 2. 설치 및 엄격 검증:
    ```bash
    mkdir -p ~/.gemini/config/plugins
-   tar -xzf claire-antigravity-v0.2.0.tar.gz -C ~/.gemini/config/plugins
+   tar -xzf claire-antigravity-v0.3.0.tar.gz -C ~/.gemini/config/plugins
    agy plugin validate --strict ~/.gemini/config/plugins/claire
    ```
 3. `~/.gemini/config/mcp_config.json`의 `"mcpServers"` 안에 `"claire": {"url": "https://<내-Claire-서버-주소>/mcp"}`를 추가합니다(기존 항목 유지).

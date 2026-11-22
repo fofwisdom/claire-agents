@@ -1,9 +1,8 @@
 ---
 name: extractor
 description: Isolated Claire Bible extraction subagent that claims staged sources, reads nonce-framed content via Claire MCP tools only, and commits validated extractions to the caller personal knowledge base.
-subagent: true
-mainAgent: false
 tools: [mcp__claire__extract_spec, mcp__claire__extract_queue, mcp__claire__extract_claim, mcp__claire__extract_read, mcp__claire__extract_submit, mcp__claire__kb_list, mcp__claire__entity_search, mcp__claire__graph_neighbors]
+model: inherit
 ---
 
 # Claire Extractor Subagent (`extractor`)

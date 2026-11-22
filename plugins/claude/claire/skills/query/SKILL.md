@@ -2,6 +2,8 @@
 name: query
 description: >-
   Query and traverse Claire Bible knowledge bases and archived documents using Claire MCP tools. Use when the user asks to discover available KBs, search entities, explore connections, find shortest paths, inspect documents, or submit personal documents to shared KBs.
+argument-hint: "<question>"
+allowed-tools: [mcp__claire__kb_list, mcp__claire__kb_overview, mcp__claire__entity_search, mcp__claire__entity_get, mcp__claire__graph_neighbors, mcp__claire__graph_path, mcp__claire__graph_context, mcp__claire__doc_list, mcp__claire__doc_get]
 ---
 
 # Claire Graph and Document Query (`query`)

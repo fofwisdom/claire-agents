@@ -6,7 +6,7 @@
       "files": [
         {
           "path": "README.md",
-          "sha256": "36d67e57cc1500a52606ea34ea4ca847452cd72403c6cd4689c4ce4ddce3ebca",
+          "sha256": "58024f95782052790b6004716ef8fd18bedb581a626ae1af278d75efc89fbf56",
           "size": 3469
         },
         {
@@ -21,7 +21,7 @@
         },
         {
           "path": "plugin.json",
-          "sha256": "c77f4f102f0fc1874edbe9c1a24ab96197b06cc2fb7c3535d45caa1fef847df6",
+          "sha256": "5e0fcbaf637f53a9284cc5ab5c348f6eb0701ee530648d6bef5b579e1835a6c1",
           "size": 808
         },
         {
@@ -48,19 +48,19 @@
         "write"
       ],
       "target": "antigravity",
-      "version": "0.4.0"
+      "version": "0.4.1"
     },
     {
       "client_id": "claude",
       "files": [
         {
           "path": ".claude-plugin/plugin.json",
-          "sha256": "26d38138b849bbff5671ff57d64d0129ecd796800d389c67f9df3a2b7cd1518e",
+          "sha256": "c7fd57d0c5f64ba7822bbf8c01ec1515e952c3e4b467130d2facc6328f058b30",
           "size": 409
         },
         {
           "path": "README.md",
-          "sha256": "3e9021adcf8c7cbafbdfd4c21d87d5e4b25f74a20515829199da54e9bbff70ec",
+          "sha256": "7fb10ca9522808e4a22b7d90b651b420f990186959eb25d0084e14f706907d5a",
           "size": 3034
         },
         {
@@ -97,9 +97,9 @@
         "write"
       ],
       "target": "claude",
-      "version": "0.4.0"
+      "version": "0.4.1"
     }
   ],
   "repo": "fofwisdom/claire-agents",
-  "version": "0.4.0"
+  "version": "0.4.1"
 }

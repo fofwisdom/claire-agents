@@ -1,7 +1,7 @@
 {
   "name": "claire",
   "displayName": "Claire Bible",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Antigravity plugin for direct URL/document ingest, isolated source extraction, and knowledge graph queries over the global claire MCP server.",
   "logo": "assets/logo.svg",
   "author": {

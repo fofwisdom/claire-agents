@@ -1,4 +1,4 @@
-# Claire Bible Plugin for Claude (`claire` v0.4.0)
+# Claire Bible Plugin for Claude (`claire` v0.4.1)
 
 Official Claude plugin that provides `/claire:ingest`, `/claire:query`, and the isolated `claire:extractor` subagent for your standalone `claire` OAuth 2.1 Streamable HTTP MCP server (`mcp__claire__*`). It contains no server tokens or secrets.
 

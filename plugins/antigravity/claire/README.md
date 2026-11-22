@@ -6,7 +6,7 @@ Provides isolated client extraction (`claire-extractor`), unified ingest & pendi
 
 This plugin works together with a standalone **`claire`** MCP entry in `~/.gemini/config/mcp_config.json`, so plugin upgrades never overwrite your server URL:
 
-1. Use Claire **`/settings/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.4.1.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/settings/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
+1. Use Claire **`/account/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.4.1.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/account/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
 2. In Antigravity, open **`Customizations -> Installed -> MCP Servers -> claire`** and complete the browser OAuth 2.1 login approving both `readonly` and `write` scopes.
 
 ## 2. Starter Workflows & Skills

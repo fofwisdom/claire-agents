@@ -22,8 +22,8 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 - **Step-by-step guides**: [한국어 가이드](./docs/antigravity.ko.md) · [English Guide](./docs/antigravity.en.md)
 - **GitHub Releases**: [Download `claire-antigravity-v0.4.1.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
 
-1. In Claire Bible **Account Settings** (`/settings/account`), switch extraction mode to `client`.
-2. In **MCP Settings** (`/settings/mcp`), copy the **Antigravity quick setup prompt** and paste it into Antigravity `+ New Conversation` (installs `~/.gemini/config/plugins/claire` and merges `mcpServers.claire` into `~/.gemini/config/mcp_config.json`).
+1. In Claire Bible **LLM provider settings** (`/account/providers`), switch extraction mode to `client`.
+2. In **MCP Settings** (`/account/mcp`), copy the **Antigravity quick setup prompt** and paste it into Antigravity `+ New Conversation` (installs `~/.gemini/config/plugins/claire` and merges `mcpServers.claire` into `~/.gemini/config/mcp_config.json`).
 3. Open **`Customizations -> Installed -> MCP Servers -> claire`** and finish OAuth 2.1 login (`readonly`, `write`).
 4. On first run when `Allow using this MCP tool?` (`claire/<tool>`) prompts, pick **`3 Yes, and always allow`** -> **`Submit`**.
 5. Use the 2 skills (`claire-ingest` for URLs, files, notes, or pending items; `claire-query` for graph search) or pick one of the 3 starter suggested prompts.
@@ -34,7 +34,7 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 - **Step-by-step guides**: [한국어 안내](./docs/claude.ko.md) · [English Guide](./docs/claude.en.md)
 
 1. In the Claude desktop app (Code mode), open **Plugins -> Add -> Add marketplace**, enter **`fofwisdom/claire-agents`**, click **Sync**, and click **Add to this computer** next to **`claire`**.
-2. In Claire Bible **MCP Settings** (`/settings/mcp`), copy the **Claude quick setup prompt** and paste it into a new Claude conversation. It registers your `/mcp` endpoint as the user-scope server **`claire`** and opens the OAuth 2.1 sign-in (`readonly`, `write`).
+2. In Claire Bible **MCP Settings** (`/account/mcp`), copy the **Claude quick setup prompt** and paste it into a new Claude conversation. It registers your `/mcp` endpoint as the user-scope server **`claire`** and opens the OAuth 2.1 sign-in (`readonly`, `write`).
 3. Start Claude again and use `/claire:ingest` (stages URLs, files, or notes and drains pending items via the isolated extractor) and `/claire:query` (searches your knowledge graph).
 
 <details>

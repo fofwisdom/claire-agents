@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/document ingest, isolated extraction, and knowledge graph queries.",
-    "version": "0.4.1"
+    "version": "0.4.3"
   },
   "plugins": [
     {
       "name": "claire",
       "source": "./plugins/claude/claire",
       "description": "Claude plugin providing /claire:ingest and /claire:query skills with isolated source extraction for your claire MCP server.",
-      "version": "0.4.1",
+      "version": "0.4.3",
       "license": "MIT"
     }
   ]

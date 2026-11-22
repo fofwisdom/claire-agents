@@ -13,14 +13,14 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 
 ## Supported Agents
 
-- **`claire`** (`antigravity`, `claire-antigravity-v0.4.1`): Antigravity plugin for direct URL/document ingest, isolated source extraction, and knowledge graph queries over the global claire MCP server.
-- **`claire`** (`claude`, `claire-claude-v0.4.1`): Claude plugin providing /claire:ingest and /claire:query skills with isolated source extraction for your claire MCP server.
+- **`claire`** (`antigravity`, `claire-antigravity-v0.4.3`): Antigravity plugin for direct URL/document ingest, isolated source extraction, and knowledge graph queries over the global claire MCP server.
+- **`claire`** (`claude`, `claire-claude-v0.4.3`): Claude plugin providing /claire:ingest and /claire:query skills with isolated source extraction for your claire MCP server.
 
 <a id="antigravity"></a>
 ## Antigravity (GUI-First Setup)
 
 - **Step-by-step guides**: [한국어 가이드](./docs/antigravity.ko.md) · [English Guide](./docs/antigravity.en.md)
-- **GitHub Releases**: [Download `claire-antigravity-v0.4.1.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
+- **GitHub Releases**: [Download `claire-antigravity-v0.4.3.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
 
 1. In Claire Bible **LLM provider settings** (`/account/providers`), switch extraction mode to `client`.
 2. In **MCP Settings** (`/account/mcp`), copy the **Antigravity quick setup prompt** and paste it into Antigravity `+ New Conversation` (installs `~/.gemini/config/plugins/claire` and merges `mcpServers.claire` into `~/.gemini/config/mcp_config.json`).
@@ -41,10 +41,10 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 <summary>CLI &amp; Advanced Verification (Terminal / SHA256SUMS)</summary>
 
 - Claude Code CLI: `claude plugin install claire --marketplace fofwisdom/claire-agents` -> `claude mcp add --transport http --scope user claire https://<your-claire-server>/mcp` -> `claude mcp login claire`.
-- Antigravity CLI / checksum check: download `claire-antigravity-v0.4.1.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), run `sha256sum -c SHA256SUMS --ignore-missing`, extract into `~/.gemini/config/plugins/`, and add `mcpServers.claire` in `~/.gemini/config/mcp_config.json`.
+- Antigravity CLI / checksum check: download `claire-antigravity-v0.4.3.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), run `sha256sum -c SHA256SUMS --ignore-missing`, extract into `~/.gemini/config/plugins/`, and add `mcpServers.claire` in `~/.gemini/config/mcp_config.json`.
 
 </details>
 
 ## Server Authentication Model
 
-This repository (`v0.4.1`) distributes static client skills, subagents, rules, and templates only. Zero server tokens or secrets are included. Every Claire Bible instance shares these bundles and authenticates dynamically over OAuth 2.1 (`PKCE S256` or `/device`).
+This repository (`v0.4.3`) distributes static client skills, subagents, rules, and templates only. Zero server tokens or secrets are included. Every Claire Bible instance shares these bundles and authenticates dynamically over OAuth 2.1 (`PKCE S256` or `/device`).

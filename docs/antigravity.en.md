@@ -21,7 +21,7 @@ Antigravity installs the `claire` plugin under `~/.gemini/config/plugins/claire`
 1. On Claire Bible **`/account/mcp`**, locate **Official Agent Marketplace (GitHub)** and click **Copy** next to **Antigravity quick setup prompt**.
    - Starting directly from GitHub? Copy below and replace `<your-claire-server>`:
    ```text
-   Download claire-antigravity-v0.4.1.zip from the latest Release of
+   Download claire-antigravity-v0.4.3.zip from the latest Release of
    https://github.com/fofwisdom/claire-agents, verify SHA256SUMS, install it into
    ~/.gemini/config/plugins/claire, and merge claire (https://<your-claire-server>/mcp) into
    ~/.gemini/config/mcp_config.json while preserving existing entries.
@@ -36,7 +36,7 @@ Antigravity installs the `claire` plugin under `~/.gemini/config/plugins/claire`
 
 ## Method 2 (Point-and-Click): Manual Setup
 
-1. Download **`claire-antigravity-v0.4.1.zip`** from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest) and unzip it to obtain the **`claire`** folder.
+1. Download **`claire-antigravity-v0.4.3.zip`** from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest) and unzip it to obtain the **`claire`** folder.
 2. Move **`claire`** into your Antigravity plugins directory (`~/.gemini/config/plugins/claire/plugin.json`).
    - macOS Finder: `Command + Shift + G` -> `~/.gemini/config`
    - Windows File Explorer: `%USERPROFILE%\.gemini\config`
@@ -72,7 +72,7 @@ On first tool call, Antigravity displays **`Allow using this MCP tool?`** for `c
 
 ---
 
-## Core Workflows Ready to Use (`v0.4.1`)
+## Core Workflows Ready to Use (`v0.4.3`)
 
 You only need two skills: **`claire-ingest`** and **`claire-query`** (plus the 3 quick starter prompts in `Plugins -> Claire Bible`).
 
@@ -97,11 +97,11 @@ When handling URLs or external files, the top-level agent stages them without re
 
 1. Verify checksum and extract:
    ```bash
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.1/claire-antigravity-v0.4.1.tar.gz"
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.1/SHA256SUMS"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.3/claire-antigravity-v0.4.3.tar.gz"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.3/SHA256SUMS"
    sha256sum -c SHA256SUMS --ignore-missing
    mkdir -p ~/.gemini/config/plugins
-   tar -xzf claire-antigravity-v0.4.1.tar.gz -C ~/.gemini/config/plugins
+   tar -xzf claire-antigravity-v0.4.3.tar.gz -C ~/.gemini/config/plugins
    agy plugin validate --strict ~/.gemini/config/plugins/claire
    ```
 2. Add `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json` under `"mcpServers"`.

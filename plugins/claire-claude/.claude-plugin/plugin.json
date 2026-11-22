@@ -1,6 +1,6 @@
 {
   "name": "claire-claude",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Claude plugin for OAuth 2.1 MCP connection, isolated source extraction, and knowledge graph queries against your Claire Bible server.",
   "author": {
     "name": "Claire Bible"

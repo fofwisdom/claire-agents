@@ -1,8 +1,9 @@
 {
   "name": "claire-antigravity",
   "displayName": "Claire Bible",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Antigravity plugin bundle for OAuth 2.1 MCP connection, isolated source extraction, and knowledge graph queries.",
+  "logo": "assets/logo.svg",
   "author": {
     "name": "Claire Bible"
   },

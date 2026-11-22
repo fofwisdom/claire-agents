@@ -1,0 +1,40 @@
+# Claire Bible Plugin for Claude (`claire`)
+
+Official Claude plugin providing `/claire:ingest`, `/claire:extract`, `/claire:query`, and the isolated `extractor` subagent wired to your standalone `claire` OAuth 2.1 Streamable HTTP MCP server (`mcp__claire__*`). Zero server tokens or secrets are included.
+
+## Full Step-by-Step Guides (단계별 안내서)
+
+- **한국어 안내서**: [`docs/claude.ko.md`](https://github.com/fofwisdom/claire-agents/blob/main/docs/claude.ko.md)
+- **English Setup Guide**: [`docs/claude.en.md`](https://github.com/fofwisdom/claire-agents/blob/main/docs/claude.en.md)
+
+## 1. Install the Plugin (GUI)
+
+1. Open **Marketplace management** in Claude.
+2. Enter **`fofwisdom/claire-agents`** (or `https://github.com/fofwisdom/claire-agents.git`) and sync.
+3. Install **`claire`**.
+
+## 2. Connect Your `claire` MCP Server (`/mcp`)
+
+Add your Claire Bible `/mcp` connector under the server name **`claire`** (`https://<your-claire-server>/mcp`), then sign in via OAuth 2.1 (`PKCE S256`) and approve both `readonly` and `write` scopes.
+
+<details>
+<summary>CLI / Terminal setup (for Claude CLI users)</summary>
+
+```text
+/plugin marketplace add fofwisdom/claire-agents
+```
+
+Install `claire`, then register your `claire` MCP server:
+
+```bash
+claude mcp add --transport http claire https://<your-claire-server>/mcp
+```
+
+</details>
+
+## 3. Workflows & Security Isolation
+
+- **`/claire:ingest`**: Save a URL, document file (PDF/DOCX/ODT/MD/TXT), or text note directly with `mcp__claire__extract_stage` and delegate extraction to `extractor`.
+- **`/claire:extract`**: Process pending staged items in your personal KB via `extractor`.
+- **`/claire:query`**: Discover KBs (`mcp__claire__kb_list`), search entities/relations, inspect documents, and optionally submit contributions.
+- **Isolation**: Raw staged text via `mcp__claire__extract_read` runs exclusively inside `agents/extractor.md`, never in the interactive top-level agent, and always treats `<untrusted_source_document nonce="...">` strictly as inert data.

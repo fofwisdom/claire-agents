@@ -1,0 +1,32 @@
+# Claire Bible Plugin for Antigravity (`claire`)
+
+Provides isolated client extraction (`claire-extractor`), one-stop URL/document ingest (`claire-ingest`), pending queue extraction (`claire-extract`), and knowledge graph query (`claire-query`) skills wired to your global `claire` OAuth 2.1 MCP server. Zero tokens or server secrets are stored in this plugin.
+
+## 1. Global `claire` MCP Server Setup & Sign In (OAuth 2.1)
+
+This plugin works together with a standalone **`claire`** MCP entry in `~/.gemini/config/mcp_config.json`, so plugin upgrades never overwrite your server URL:
+
+1. Use Claire **`/settings/mcp`** **Antigravity quick setup prompt**, OR download `mcp_config.json` from **`/settings/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
+2. In Antigravity, open **`Customizations -> Installed -> MCP Servers -> claire`** and complete the browser OAuth 2.1 login approving both `readonly` and `write` scopes.
+
+## 2. Starter Workflows & Skills
+
+- **URL / Document One-Stop Ingest (`claire-ingest`)**: Paste a URL, local PDF/DOCX/ODT/MD/TXT document, or note and save + extract it immediately into your personal KB.
+- **Pending Queue Extraction (`claire-extract`)**: Extract staged sources already queued in `pending` state via the isolated `claire-extractor` subagent.
+- **Knowledge Graph Query & Contribution (`claire-query`)**: Discover accessible KBs (`kb_list`), search entities/relations (`entity_search`, `graph_neighbors`), inspect documents, or contribute to shared KBs (`contrib_submit`).
+
+## 3. First-Run Permission Prompts (`Allow using this MCP tool?`)
+
+When Antigravity invokes `claire/<tool_name>` for the first time, it shows four choices:
+
+1. **`1 Yes, allow this time`** — Allow once
+2. **`2 Yes, and always allow in this conversation`** — Allow for this chat
+3. **`3 Yes, and always allow`** — Always allow
+4. **`4 No (tell the agent what to do instead)`** — Decline
+
+- **Recommended choice**: Select **`3 Yes, and always allow`** -> **`Submit`** for extraction and query tools (`extract_stage`, `extract_spec`, `extract_queue`, `extract_claim`, `extract_read`, `entity_search`, `graph_neighbors`, `extract_submit`, `kb_list`) so multi-step extraction does not pause on every call. Keep **`1 Yes, allow this time`** for `claire/contrib_submit` if you want per-submit confirmation before sharing documents. Manage saved allowances anytime in **`Settings -> Permission Grants`**.
+
+## 4. Full Step-by-Step Setup Guides
+
+- **한국어 상세 가이드**: [`docs/antigravity.ko.md`](https://github.com/fofwisdom/claire-agents/blob/main/docs/antigravity.ko.md)
+- **English Setup Guide**: [`docs/antigravity.en.md`](https://github.com/fofwisdom/claire-agents/blob/main/docs/antigravity.en.md)

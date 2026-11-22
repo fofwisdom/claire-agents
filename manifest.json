@@ -11,8 +11,8 @@
         },
         {
           "path": "agents/claire-extractor.md",
-          "sha256": "f2aca55bfb834f92e4cb54c6e1e445d67d72b782a615eb947db36df9931682e1",
-          "size": 6600
+          "sha256": "8f03e8c0963c8e055a8506caafc0f7eb1778d6e8fd9bf2880e5a4ac166bd0a08",
+          "size": 6960
         },
         {
           "path": "assets/logo.svg",
@@ -26,8 +26,8 @@
         },
         {
           "path": "rules/AGENTS.md",
-          "sha256": "45186daabe50fac0753ee2e827a0b8063a8d37c4fd239bd5c4c80b30359ec65a",
-          "size": 5693
+          "sha256": "b27d6baf007ade3344f618160e0ed6742e150e9697469b89a438ec661df6dd97",
+          "size": 5867
         },
         {
           "path": "skills/claire-ingest/SKILL.md",
@@ -65,8 +65,8 @@
         },
         {
           "path": "agents/extractor.md",
-          "sha256": "06ed9b74002ca673a9ac9e59aaa51ef121ffda4d3db6be60a7df95386e4a8a02",
-          "size": 6673
+          "sha256": "fc9572bc3dd52eadf4414ab5e05ecf2bad2ed3a7a42ede80994e778cbc097b78",
+          "size": 6907
         },
         {
           "path": "hooks/hooks.json",

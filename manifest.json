@@ -6,7 +6,7 @@
       "files": [
         {
           "path": "README.md",
-          "sha256": "b0ddb521da822ecab85baaee1b10903d941a6caac3ea7e2d5ca2db525201fed0",
+          "sha256": "76787f807a849608ca723a521678d78cd241f40dc0e9fe68c13f754b2b2051ad",
           "size": 3467
         },
         {
@@ -21,18 +21,18 @@
         },
         {
           "path": "plugin.json",
-          "sha256": "3b31d409da49510aa634003ee78fe5c3d0e126ea2382a52a071cdcd88bad7248",
+          "sha256": "84bccbb5b45d4f1ff74c98062ec415799e191ed23a4605a68ccd50c5f9fae374",
           "size": 808
         },
         {
           "path": "rules/AGENTS.md",
-          "sha256": "caf33f584a97ab9d0b96c73cb6c28c934b882ba9dfc31b7dc8e38b93aee31efb",
-          "size": 5727
+          "sha256": "9c922bbe1cdf9a4a49492f843b5601bf5636daa459842c2304ec3d52c88764ce",
+          "size": 6049
         },
         {
           "path": "skills/claire-ingest/SKILL.md",
-          "sha256": "b6c4e4692bb1f2617fcda4996ce2d58af78b98dfe7c3673defe347cdb9ee313b",
-          "size": 5320
+          "sha256": "38ce8839c01526668f42bf2dac86c52f9188efed19eba4a252cf0f6d935796f1",
+          "size": 8907
         },
         {
           "path": "skills/claire-query/SKILL.md",
@@ -48,19 +48,19 @@
         "write"
       ],
       "target": "antigravity",
-      "version": "0.4.3"
+      "version": "0.4.4"
     },
     {
       "client_id": "claude",
       "files": [
         {
           "path": ".claude-plugin/plugin.json",
-          "sha256": "51df8432c3e20ebbaf4bb746cecc6f5d92a2ebbb298be2ee056262b62eca56ad",
+          "sha256": "939f15c39f5e35cffc0b125c78cf16b6e7cc0bd501808e5048c01fbff6514289",
           "size": 409
         },
         {
           "path": "README.md",
-          "sha256": "8f7bc8280ca04d3942e1cdc0e255cf9e3a68cb209ec924ccc51ea9b08c5768fb",
+          "sha256": "76a06573cc80be0b5eebe4ebbc7b4d0ab745a41327f6bd68303c451f2849e762",
           "size": 3034
         },
         {
@@ -80,8 +80,8 @@
         },
         {
           "path": "skills/ingest/SKILL.md",
-          "sha256": "d34c85378228e77a1872ecaf9a431c4d3e72a3d8302acf453f55b2d84a8cfdb9",
-          "size": 5929
+          "sha256": "c6101be9af8a579a3ac211abd3c1525005e1c7439bf3af2921047ca76a3484b9",
+          "size": 9532
         },
         {
           "path": "skills/query/SKILL.md",
@@ -97,9 +97,9 @@
         "write"
       ],
       "target": "claude",
-      "version": "0.4.3"
+      "version": "0.4.4"
     }
   ],
   "repo": "fofwisdom/claire-agents",
-  "version": "0.4.3"
+  "version": "0.4.4"
 }

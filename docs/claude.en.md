@@ -69,7 +69,7 @@ You do not need terminal knowledge. In the **Claude desktop app**, a few mouse c
 
 ---
 
-## Commands Ready to Use (`v0.4.3`)
+## Commands Ready to Use (`v0.4.4`)
 
 - **`/claire:ingest <url, file, or note>`** (or **`/claire:ingest`** with no arguments):
   - Saves a web address, a local file (PDF, DOCX, ODT, MD, TXT, RST, ADOC, HTML), or a text note on your server and completes extraction in one step.

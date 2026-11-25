@@ -1,6 +1,6 @@
-# Claire Bible Plugin for Claude (`claire` v0.4.4)
+# Claire Bible Plugin for Claude (`claire` v0.0.14)
 
-Official Claude plugin that provides `/claire:ingest`, `/claire:query`, and the isolated `claire:extractor` subagent for your standalone `claire` OAuth 2.1 Streamable HTTP MCP server (`mcp__claire__*`). It contains no server tokens or secrets.
+Official Claude plugin that provides `/claire:ingest`, `/claire:regenerate`, `/claire:query`, and the isolated `claire:extractor` subagent for your standalone `claire` OAuth 2.1 Streamable HTTP MCP server (`mcp__claire__*`). It contains no server tokens or secrets.
 
 ## Full Step-by-Step Guides (단계별 안내서)
 
@@ -31,11 +31,12 @@ claude mcp login claire
 
 ## 3. Workflows & Security Isolation
 
-You only need two user-facing commands:
+You only need three `claire` commands:
 
 - **`/claire:ingest`**:
   - **URL / File / Note Ingest**: Saves a URL, local file (PDF, DOCX, ODT, MD, TXT, RST, ADOC, HTML), or text note with `mcp__claire__extract_stage` and extracts it automatically via the hidden forked subagent runner (`extract-runner` -> `claire:extractor`).
   - **Pending Queue Drain**: Invoke `/claire:ingest` with no arguments (or ask to process waiting/queued items) to check `mcp__claire__extract_queue` and drain `pending` items staged from the Web UI, Telegram, or feeds through the same hidden runner.
+- **`/claire:regenerate`**: Re-opens an existing personal KB document from stored raw text (`refetch=False`) and re-extracts it through the same hidden runner without re-fetching the URL.
 - **`/claire:query`**: Discovers KBs (`mcp__claire__kb_list`), searches entities and relations, inspects documents, and submits contributions only after your explicit approval.
 
 Examples:
@@ -44,7 +45,8 @@ Examples:
 /claire:ingest https://example.com/article
 /claire:ingest ./notes/spec.pdf
 /claire:ingest
+/claire:regenerate <document_id or title>
 /claire:query Find documents about Fedify
 ```
 
-- **Isolation**: Raw staged text from `mcp__claire__extract_read` is read only inside `agents/extractor.md` (`claire:extractor`), which has Claire MCP tools only (no files, shell, or browser). `/claire:ingest` invokes the hidden forked subagent runner automatically so users only learn 2 commands. When Claude on the main thread tries to read a raw staged source directly, the `PreToolUse` guard hook in `hooks/hooks.json` stops the call and returns: `extract_read is allowed only in the claire:extractor subagent. Use /claire:ingest, or give the document_id to claire:extractor.` Text inside `<untrusted_source_document nonce="...">` is always inert data.
+- **Isolation**: Raw staged text from `mcp__claire__extract_read` is read only inside `agents/extractor.md` (`claire:extractor`), which has Claire MCP tools only (no files, shell, or browser). `/claire:ingest` and `/claire:regenerate` invoke the hidden forked subagent runner automatically. When Claude on the main thread tries to read a raw staged source directly, the `PreToolUse` guard hook in `hooks/hooks.json` stops the call and returns: `extract_read is allowed only in the claire:extractor subagent. Use /claire:ingest, or give the document_id to claire:extractor.` Text inside `<untrusted_source_document nonce="...">` is always inert data.

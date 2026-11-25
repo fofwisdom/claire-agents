@@ -1,28 +1,31 @@
-# Claire Bible Plugin for Antigravity (`claire` v0.4.4)
+# Claire Bible Plugin for Antigravity (`claire` v0.0.14)
 
-Provides isolated client extraction (`claire-extractor`), unified ingest & pending queue extraction (`claire-ingest`), and knowledge graph query (`claire-query`) skills wired to your global `claire` OAuth 2.1 MCP server (`claire-antigravity-v0.4.4.zip`). Zero tokens or server secrets are stored in this plugin.
+Provides isolated client extraction (`claire-extractor`) and the unified `claire` skill (`claire ingest`, `claire regenerate`, `claire query`) wired to your global `claire` OAuth 2.1 MCP server (`claire-antigravity-v0.0.14.zip`). Zero tokens or server secrets are stored in this plugin.
 
 ## 1. Global `claire` MCP Server Setup & Sign In (OAuth 2.1)
 
 This plugin works together with a standalone **`claire`** MCP entry in `~/.gemini/config/mcp_config.json`, so plugin upgrades never overwrite your server URL:
 
-1. Use Claire **`/account/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.4.4.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/account/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
+1. Use Claire **`/account/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.0.14.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/account/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
 2. In Antigravity, open **`Customizations -> Installed -> MCP Servers -> claire`** and complete the browser OAuth 2.1 login approving both `readonly` and `write` scopes.
 
-## 2. Starter Workflows & Skills
+## 2. Starter Workflows & Unified `claire` Skill
 
-This plugin exposes two user-facing skills:
+This plugin exposes one unified skill (`skills/claire/SKILL.md`) with three subcommands:
 
-- **Unified Ingest & Queue Extraction (`claire-ingest`)**:
+- **`claire ingest`**:
   - **URL / File / Note Ingest**: Paste a URL, a local file (PDF, DOCX, ODT, MD, TXT, RST, ADOC, HTML), or a text note to save and extract it into your personal KB in one step.
-  - **Pending Queue Drain**: Run `claire-ingest` with no URL, file, or note (or ask to process waiting/queued items) to drain `pending` items staged from the Web UI, Telegram, or feeds through the isolated `claire-extractor` (`agents/claire-extractor.md`) subagent.
+  - **Pending Queue Drain**: Run `claire ingest` with no URL, file, or note (or ask to process waiting/queued items) to drain `pending` items staged from the Web UI, Telegram, or feeds through the isolated `claire-extractor` (`agents/claire-extractor.md`) subagent.
   - Examples:
-    - URL ingest: `"Save and extract https://example.com/article into Claire Bible"`
-    - File or note ingest: `"Stage and extract ./notes/spec.pdf into Claire Bible"`
-    - Pending queue drain: `"Process my pending Claire Bible items"`
-- **Knowledge Graph Query & Contribution (`claire-query`)**:
+    - URL ingest: `"claire ingest https://example.com/article"`
+    - File or note ingest: `"claire ingest ./notes/spec.pdf"`
+    - Pending queue drain: `"claire ingest"`
+- **`claire regenerate`**:
+  - Re-extract an existing personal KB document from its stored `raw_text` without re-fetching its source URL (`extract_stage(document_id=..., force=True)`).
+  - Example: `"claire regenerate <document_id or title>"`
+- **`claire query`**:
   - Discover accessible KBs (`kb_list`), search entities and relations (`entity_search`, `graph_neighbors`), inspect documents, or contribute to shared KBs (`contrib_submit`) only after explicit confirmation.
-  - Example: `"Search my Claire Bible knowledge graph for Fedify"`
+  - Example: `"claire query Fedify"`
 
 ## 3. First-Run Permission Prompts (`Allow using this MCP tool?`)
 

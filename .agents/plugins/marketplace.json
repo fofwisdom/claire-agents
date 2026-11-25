@@ -1,0 +1,20 @@
+{
+  "name": "claire-agents",
+  "interface": {
+    "displayName": "Claire Bible"
+  },
+  "plugins": [
+    {
+      "name": "claire",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex/claire"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

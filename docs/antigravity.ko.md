@@ -21,7 +21,7 @@ Antigravity가 사용자 운영체제에 맞춰 `~/.gemini/config/plugins/claire
 1. Claire Bible **`/account/mcp`** 페이지의 **공식 에이전트 마켓플레이스 (GitHub)** 카드에서 **`Antigravity 빠른 설치 문구`** 옆 **복사** 버튼을 누릅니다.
    - GitHub에서 바로 시작하려면 아래 문구에서 `<내-Claire-서버-주소>`만 본인 서버 주소로 바꿔 복사하세요:
    ```text
-   https://github.com/fofwisdom/claire-agents 최신 Release에서 claire-antigravity-v0.4.4.zip을 받아
+   https://github.com/fofwisdom/claire-agents 최신 Release에서 claire-antigravity-v0.0.14.zip을 받아
    SHA256SUMS 검증 후 ~/.gemini/config/plugins/claire에 설치하고, 기존 설정을 보존하면서
    ~/.gemini/config/mcp_config.json에 claire (https://<내-Claire-서버-주소>/mcp)을 병합해 줘.
    ```
@@ -38,7 +38,7 @@ Antigravity가 사용자 운영체제에 맞춰 `~/.gemini/config/plugins/claire
 에이전트에게 파일 작업을 맡기지 않고 직접 내려받아 적용하고 싶을 때 사용합니다.
 
 ### 1단계: 플러그인 `.zip`과 `mcp_config.json` 내려받기
-1. [GitHub Releases 페이지](https://github.com/fofwisdom/claire-agents/releases/latest)에서 **`claire-antigravity-v0.4.4.zip`** 파일을 내려받아 압축을 풉니다. (**`claire`** 폴더가 만들어집니다.)
+1. [GitHub Releases 페이지](https://github.com/fofwisdom/claire-agents/releases/latest)에서 **`claire-antigravity-v0.0.14.zip`** 파일을 내려받아 압축을 풉니다. (**`claire`** 폴더가 만들어집니다.)
 2. Claire Bible **`/account/mcp`** 페이지에서 **`서버 연결 파일 내려받기`** 버튼을 눌러 **`mcp_config.json`** 파일을 내려받습니다.
 
 ### 2단계: `.gemini/config` 폴더에 넣기
@@ -86,19 +86,22 @@ Antigravity가 사용자 운영체제에 맞춰 `~/.gemini/config/plugins/claire
 
 ---
 
-## 바로 해 볼 수 있는 주요 워크플로 2가지 (`v0.4.4`)
+## 바로 해 볼 수 있는 주요 워크플로 3가지 (`v0.0.14`)
 
-사용자는 **`claire-ingest`**와 **`claire-query`** 두 가지 스킬만 익히면 됩니다. (`Plugins -> Claire Bible`의 추천 프롬프트 3개도 바로 사용할 수 있습니다.)
+사용자는 통합 **`claire`** 스킬의 하위 명령 3가지(**`claire ingest`**, **`claire regenerate`**, **`claire query`**)만 익히면 됩니다. (`Plugins -> Claire Bible`의 추천 프롬프트 3개도 바로 사용할 수 있습니다.)
 
-1. **통합 저장 · 추출 (`claire-ingest`)**:
+1. **통합 저장 · 추출 (`claire ingest`)**:
    - **URL · 로컬 파일 · 메모 바로 저장 & 추출**: URL, 로컬 문서 파일(PDF/DOCX/ODT/MD/TXT/RST/ADOC/HTML), 또는 텍스트 메모를 저장하고 즉시 추출합니다.
-     - URL 저장·추출: `"https://example.com/article 이 글 Claire Bible에 저장하고 추출해 줘"`
-     - 파일·메모 저장·추출: `"이 PDF/DOCX/MD 파일을 Claire Bible에 저장·추출해 줘"`
-   - **대기열 추출(인자 없이 호출)**: URL·파일·메모 없이 `claire-ingest`를 실행하거나 대기 중인 자료 처리를 요청하면, 웹 화면·텔레그램·피드에서 수집되어 대기 중(`pending`)인 항목을 격리된 `claire-extractor` 서브에이전트로 안전하게 추출합니다.
+     - URL 저장·추출: `"claire ingest https://example.com/article"`
+     - 파일·메모 저장·추출: `"claire ingest ./notes/spec.pdf"`
+   - **대기열 추출(인자 없이 호출)**: URL·파일·메모 없이 `claire ingest`를 실행하거나 대기 중인 자료 처리를 요청하면, 웹 화면·텔레그램·피드에서 수집되어 대기 중(`pending`)인 항목을 격리된 `claire-extractor` 서브에이전트로 안전하게 추출합니다.
      - 대기열 추출: `"대기 중인 Claire Bible 자료를 처리해 줘"`
-2. **지식 그래프 검색 및 공유 기여 (`claire-query`)**:
+2. **저장 원문 기반 재생성 (`claire regenerate`)**:
+   - 이미 적재된 문서의 저장 원문(`raw_text`)을 다시 수집하지 않고 초록·본문·지식 그래프를 재추출합니다.
+     - 원문 재생성: `"claire regenerate <문서 ID 또는 제목>"`
+3. **지식 그래프 검색 및 공유 기여 (`claire query`)**:
    - 내 지식베이스와 공유 지식베이스에서 엔티티·관계·문서를 검색하고, 사용자가 명시적으로 확인한 경우에만 공유 지식베이스에 기여합니다.
-     - 그래프 검색: `"내 Claire Bible 지식 그래프에서 관련 주제를 검색해 줘"`
+     - 그래프 검색: `"claire query Fedify와 관련된 문서를 찾아 줘"`
 
 URL·외부 문서를 맡길 때 Antigravity 본체는 원문을 브라우저로 열거나 직접 읽지 않고 Claire 서버에 스테이징한 뒤 격리된 `claire-extractor` 서브에이전트에 `document_id`만 전달하므로 프롬프트 인젝션으로부터 안전합니다.
 
@@ -106,7 +109,7 @@ URL·외부 문서를 맡길 때 Antigravity 본체는 원문을 브라우저로
 
 ## 자주 묻는 질문 (FAQ)
 
-- **Q. 플러그인을 새 버전(`v0.4.4`)으로 업데이트해도 서버 URL이나 다른 MCP 설정이 유지되나요?**
+- **Q. 플러그인을 새 버전(`v0.0.14`)으로 업데이트해도 서버 URL이나 다른 MCP 설정이 유지되나요?**
   - 네. 전역 `~/.gemini/config/mcp_config.json`의 `claire` 설정과 플러그인 폴더(`plugins/claire/`)가 분리되어 있어 플러그인을 덮어써도 URL과 기존 다른 MCP 서버가 그대로 보존됩니다.
 - **Q. `Claire Bible`이 `Plugins` 목록에 안 보여요.**
   - 폴더가 `plugins/claire/claire/plugin.json`처럼 이중 중첩되지 않았는지 확인하세요. `plugins/claire/plugin.json` 위치여야 정상 인식됩니다.
@@ -120,15 +123,15 @@ URL·외부 문서를 맡길 때 Antigravity 본체는 원문을 브라우저로
 
 1. 아카이브 및 체크섬 검증:
    ```bash
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.4/claire-antigravity-v0.4.4.tar.gz"
-   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.4.4/SHA256SUMS"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.0.14/claire-antigravity-v0.0.14.tar.gz"
+   curl -fsSLO "https://github.com/fofwisdom/claire-agents/releases/download/v0.0.14/SHA256SUMS"
    sha256sum -c SHA256SUMS --ignore-missing
    ```
    *(macOS에서는 `shasum -a 256 -c SHA256SUMS --ignore-missing` 사용)*
 2. 설치 및 엄격 검증:
    ```bash
    mkdir -p ~/.gemini/config/plugins
-   tar -xzf claire-antigravity-v0.4.4.tar.gz -C ~/.gemini/config/plugins
+   tar -xzf claire-antigravity-v0.0.14.tar.gz -C ~/.gemini/config/plugins
    agy plugin validate --strict ~/.gemini/config/plugins/claire
    ```
 3. `~/.gemini/config/mcp_config.json`의 `"mcpServers"` 안에 `"claire": {"url": "https://<내-Claire-서버-주소>/mcp"}`를 추가합니다(기존 항목 유지).

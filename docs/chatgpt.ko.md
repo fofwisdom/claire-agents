@@ -29,7 +29,7 @@
    ```text
    이 컴퓨터의 Codex에 Claire Bible을 설정해 줘.
    1) https://github.com/fofwisdom/claire-agents 최신 Release에서
-      claire-codex-v0.0.14.zip과 SHA256SUMS를 받아 체크섬을 검증한 뒤
+      claire-codex-v0.0.15.zip과 SHA256SUMS를 받아 체크섬을 검증한 뒤
       skills/claire를 ~/.codex/skills/claire에,
       agents/claire-extractor.toml을 ~/.codex/agents/claire-extractor.toml에 설치하고
       기존 설정을 보존하면서 rules/AGENTS.md 내용을 ~/.codex/AGENTS.md에 추가해 줘.
@@ -56,7 +56,7 @@
 
 ---
 
-## 바로 사용할 수 있는 하위 명령 3가지 (`v0.0.14`)
+## 바로 사용할 수 있는 하위 명령 3가지 (`v0.0.15`)
 
 사용자는 통합 **`$claire`** 스킬과 3가지 하위 명령(**`$claire ingest`**, **`$claire regenerate`**, **`$claire query`**)만 익히면 됩니다.
 
@@ -89,7 +89,7 @@ $claire query Fedify와 관련된 문서를 찾아 줘
 
 ## 플러그인 업데이트 · 제거
 
-1. 새 버전(`v0.0.14`)이 나오면 [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest)의 `claire-codex-v0.0.14.zip`으로 `~/.codex/skills/claire`와 `~/.codex/agents/claire-extractor.toml`을 덮어씁니다. (`~/.codex/config.toml`의 `claire` 서버 URL은 그대로 유지됩니다.)
+1. 새 버전(`v0.0.15`)이 나오면 [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest)의 `claire-codex-v0.0.15.zip`으로 `~/.codex/skills/claire`와 `~/.codex/agents/claire-extractor.toml`을 덮어씁니다. (`~/.codex/config.toml`의 `claire` 서버 URL은 그대로 유지됩니다.)
 2. 제거하려면 `~/.codex/skills/claire`, `~/.codex/agents/claire-extractor.toml`을 삭제하고 `codex mcp remove claire`를 실행하세요.
 
 ---
@@ -126,11 +126,11 @@ ChatGPT 웹과 데스크톱 일반 채팅에는 격리 추출 에이전트(`clai
 <summary>터미널 / 수동 설치 안내 (.zip · .tar.gz · SHA256SUMS)</summary>
 
 ```bash
-curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/claire-codex-v0.0.14.tar.gz"
+curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/claire-codex-v0.0.15.tar.gz"
 curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/SHA256SUMS"
 sha256sum -c SHA256SUMS --ignore-missing
 mkdir -p ~/.codex/skills ~/.codex/agents
-tar -xzf claire-codex-v0.0.14.tar.gz -C /tmp
+tar -xzf claire-codex-v0.0.15.tar.gz -C /tmp
 cp -r /tmp/claire/skills/claire ~/.codex/skills/claire
 cp /tmp/claire/agents/claire-extractor.toml ~/.codex/agents/claire-extractor.toml
 codex mcp add claire --url "https://<내-Claire-서버-주소>/mcp"

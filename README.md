@@ -13,15 +13,15 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 
 ## Supported Agents
 
-- **`claire`** (`antigravity`, `claire-antigravity-v0.0.14`): Antigravity plugin providing the unified claire skill (ingest, regenerate, query subcommands), isolated source extraction, and knowledge graph queries over the global claire MCP server.
-- **`claire`** (`claude`, `claire-claude-v0.0.14`): Claude plugin providing /claire:ingest, /claire:regenerate, and /claire:query skills with isolated source extraction for your claire MCP server.
-- **`claire`** (`codex`, `claire-codex-v0.0.14`): ChatGPT (Codex) plugin providing the unified claire skill (ingest, regenerate, query subcommands) with an isolated claire-extractor subagent for your claire MCP server.
+- **`claire`** (`antigravity`, `claire-antigravity-v0.0.15`): Antigravity plugin providing the unified claire skill (ingest, regenerate, query subcommands), isolated source extraction, and knowledge graph queries over the global claire MCP server.
+- **`claire`** (`claude`, `claire-claude-v0.0.15`): Claude plugin providing /claire:ingest, /claire:regenerate, and /claire:query skills with isolated source extraction for your claire MCP server.
+- **`claire`** (`codex`, `claire-codex-v0.0.15`): ChatGPT (Codex) plugin providing the unified claire skill (ingest, regenerate, query subcommands) with an isolated claire-extractor subagent for your claire MCP server.
 
 <a id="antigravity"></a>
 ## Antigravity (GUI-First Setup)
 
 - **Step-by-step guides**: [한국어 가이드](./docs/antigravity.ko.md) · [English Guide](./docs/antigravity.en.md)
-- **GitHub Releases**: [Download `claire-antigravity-v0.0.14.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
+- **GitHub Releases**: [Download `claire-antigravity-v0.0.15.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
 
 1. In Claire Bible **LLM provider settings** (`/account/providers`), switch extraction mode to `client`.
 2. In **MCP Settings** (`/account/mcp`), copy the **Antigravity quick setup prompt** and paste it into Antigravity `+ New Conversation` (installs `~/.gemini/config/plugins/claire` and merges `mcpServers.claire` into `~/.gemini/config/mcp_config.json`).
@@ -42,7 +42,7 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 ## ChatGPT (Codex App, Codex CLI, and ChatGPT Web/Desktop)
 
 - **Step-by-step guides**: [한국어 안내](./docs/chatgpt.ko.md) · [English Guide](./docs/chatgpt.en.md)
-- **GitHub Releases**: [Download `claire-codex-v0.0.14.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
+- **GitHub Releases**: [Download `claire-codex-v0.0.15.zip`](https://github.com/fofwisdom/claire-agents/releases/latest)
 
 1. **Codex app / CLI (full ingest, isolated extraction, and query)**: In Claire Bible **MCP Settings** (`/account/mcp`), copy the **ChatGPT (Codex) quick setup prompt** and paste it into a new Codex conversation (installs the unified `skills/claire` skill for `$claire ingest` / `$claire regenerate` / `$claire query`, `agents/claire-extractor.toml` with `sandbox_mode = "read-only"`, and `rules/AGENTS.md`, runs `codex mcp add claire --url ...`, and starts `codex mcp login claire`).
 2. **ChatGPT web / desktop chat (read-only search)**: Enable **Developer Mode** in ChatGPT connector settings, add `https://<your-claire-server>/mcp` with OAuth, and **clear `Allow write access`** on the Claire Bible consent screen so only `readonly` is granted.
@@ -51,11 +51,11 @@ Official Claire Bible agent plugins for OAuth 2.1 MCP connection, direct URL/doc
 <summary>CLI &amp; Advanced Verification (Terminal / SHA256SUMS)</summary>
 
 - Claude Code CLI: `claude plugin install claire --marketplace fofwisdom/claire-agents` -> `claude mcp add --transport http --scope user claire https://<your-claire-server>/mcp` -> `claude mcp login claire`.
-- Codex CLI: download `claire-codex-v0.0.14.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), install `skills/claire`, `agents/claire-extractor.toml`, and `rules/AGENTS.md` under `~/.codex/`, then run `codex mcp add claire --url "https://<your-claire-server>/mcp"` -> `codex mcp login claire`.
-- Antigravity CLI / checksum check: download `claire-antigravity-v0.0.14.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), run `sha256sum -c SHA256SUMS --ignore-missing`, extract into `~/.gemini/config/plugins/`, and add `mcpServers.claire` in `~/.gemini/config/mcp_config.json`.
+- Codex CLI: download `claire-codex-v0.0.15.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), install `skills/claire`, `agents/claire-extractor.toml`, and `rules/AGENTS.md` under `~/.codex/`, then run `codex mcp add claire --url "https://<your-claire-server>/mcp"` -> `codex mcp login claire`.
+- Antigravity CLI / checksum check: download `claire-antigravity-v0.0.15.tar.gz` and `SHA256SUMS` from [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest), run `sha256sum -c SHA256SUMS --ignore-missing`, extract into `~/.gemini/config/plugins/`, and add `mcpServers.claire` in `~/.gemini/config/mcp_config.json`.
 
 </details>
 
 ## Server Authentication Model
 
-This repository (`v0.0.14`) distributes static client skills, subagents, rules, and templates only. Zero server tokens or secrets are included. Every Claire Bible instance shares these bundles and authenticates dynamically over OAuth 2.1 (`PKCE S256` or `/device`).
+This repository (`v0.0.15`) distributes static client skills, subagents, rules, and templates only. Zero server tokens or secrets are included. Every Claire Bible instance shares these bundles and authenticates dynamically over OAuth 2.1 (`PKCE S256` or `/device`).

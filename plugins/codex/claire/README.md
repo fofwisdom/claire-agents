@@ -1,4 +1,4 @@
-# Claire Bible Plugin for ChatGPT / Codex (`claire` v0.0.14)
+# Claire Bible Plugin for ChatGPT / Codex (`claire` v0.0.15)
 
 Official ChatGPT / Codex plugin that provides the unified `claire` skill (`$claire ingest`, `$claire regenerate`, `$claire query`) and the isolated `claire-extractor` subagent (`agents/claire-extractor.toml` with `sandbox_mode = "read-only"`) for your standalone `claire` OAuth 2.1 Streamable HTTP MCP server. It contains no server tokens or secrets.
 
@@ -9,7 +9,7 @@ Official ChatGPT / Codex plugin that provides the unified `claire` skill (`$clai
 
 ## 1. Install the Plugin / Skill & Isolated Extractor
 
-Install the plugin from the marketplace (`.agents/plugins/marketplace.json` -> `./plugins/codex/claire`, `.codex-plugin/plugin.json`), or copy the bundle assets from `claire-codex-v0.0.14.zip` into your Codex configuration:
+Install the plugin from the marketplace (`.agents/plugins/marketplace.json` -> `./plugins/codex/claire`, `.codex-plugin/plugin.json`), or copy the bundle assets from `claire-codex-v0.0.15.zip` into your Codex configuration:
 
 - `skills/claire/SKILL.md` -> `~/.codex/skills/claire/SKILL.md`
 - `agents/claire-extractor.toml` -> `~/.codex/agents/claire-extractor.toml`

@@ -1,12 +1,12 @@
-# Claire Bible Plugin for Antigravity (`claire` v0.0.14)
+# Claire Bible Plugin for Antigravity (`claire` v0.0.15)
 
-Provides isolated client extraction (`claire-extractor`) and the unified `claire` skill (`claire ingest`, `claire regenerate`, `claire query`) wired to your global `claire` OAuth 2.1 MCP server (`claire-antigravity-v0.0.14.zip`). Zero tokens or server secrets are stored in this plugin.
+Provides isolated client extraction (`claire-extractor`) and the unified `claire` skill (`claire ingest`, `claire regenerate`, `claire query`) wired to your global `claire` OAuth 2.1 MCP server (`claire-antigravity-v0.0.15.zip`). Zero tokens or server secrets are stored in this plugin.
 
 ## 1. Global `claire` MCP Server Setup & Sign In (OAuth 2.1)
 
 This plugin works together with a standalone **`claire`** MCP entry in `~/.gemini/config/mcp_config.json`, so plugin upgrades never overwrite your server URL:
 
-1. Use Claire **`/account/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.0.14.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/account/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
+1. Use Claire **`/account/mcp`** **Antigravity quick setup prompt** (installs `claire-antigravity-v0.0.15.zip` into `~/.gemini/config/plugins/claire`), OR download `mcp_config.json` from **`/account/mcp`** and place/merge `"claire": {"url": "https://<your-claire-server>/mcp"}` inside `~/.gemini/config/mcp_config.json`.
 2. In Antigravity, open **`Customizations -> Installed -> MCP Servers -> claire`** and complete the browser OAuth 2.1 login approving both `readonly` and `write` scopes.
 
 ## 2. Starter Workflows & Unified `claire` Skill

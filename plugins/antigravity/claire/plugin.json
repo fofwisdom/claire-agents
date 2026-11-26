@@ -1,7 +1,7 @@
 {
   "name": "claire",
   "displayName": "Claire Bible",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Antigravity plugin providing the unified claire skill (ingest, regenerate, query subcommands), isolated source extraction, and knowledge graph queries over the global claire MCP server.",
   "logo": "assets/logo.svg",
   "author": {

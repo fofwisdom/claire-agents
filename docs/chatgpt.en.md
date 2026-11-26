@@ -28,7 +28,7 @@ One pasted prompt in **Codex (app or CLI)** installs the Claire Bible skills and
    - To start from GitHub, copy this prompt and replace only `<your-claire-server>` with your server address:
    ```text
    Set up Claire Bible for Codex on this computer.
-   1) Download claire-codex-v0.0.14.zip and SHA256SUMS from the latest GitHub Release of
+   1) Download claire-codex-v0.0.15.zip and SHA256SUMS from the latest GitHub Release of
       https://github.com/fofwisdom/claire-agents, verify the checksum, install skills/claire into
       ~/.codex/skills/claire, install agents/claire-extractor.toml into
       ~/.codex/agents/claire-extractor.toml, and append rules/AGENTS.md into ~/.codex/AGENTS.md
@@ -56,7 +56,7 @@ One pasted prompt in **Codex (app or CLI)** installs the Claire Bible skills and
 
 ---
 
-## Three Subcommands Ready to Use (`v0.0.14`)
+## Three Subcommands Ready to Use (`v0.0.15`)
 
 You only need the unified **`$claire`** skill with three subcommands: **`$claire ingest`**, **`$claire regenerate`**, and **`$claire query`**.
 
@@ -89,7 +89,7 @@ $claire query Find documents about Fedify
 
 ## Update or Remove the Plugin
 
-1. When a new version (`v0.0.14`) is released, overwrite `~/.codex/skills/claire` and `~/.codex/agents/claire-extractor.toml` from `claire-codex-v0.0.14.zip` on [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest). Your `claire` server URL in `~/.codex/config.toml` stays untouched.
+1. When a new version (`v0.0.15`) is released, overwrite `~/.codex/skills/claire` and `~/.codex/agents/claire-extractor.toml` from `claire-codex-v0.0.15.zip` on [GitHub Releases](https://github.com/fofwisdom/claire-agents/releases/latest). Your `claire` server URL in `~/.codex/config.toml` stays untouched.
 2. To remove it, delete `~/.codex/skills/claire` and `~/.codex/agents/claire-extractor.toml`, and run `codex mcp remove claire`.
 
 ---
@@ -126,11 +126,11 @@ For saving and extracting sources, use Codex set up with Steps 1 and 2 above.
 <summary>Terminal / Manual Setup (.zip, .tar.gz, and SHA256SUMS)</summary>
 
 ```bash
-curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/claire-codex-v0.0.14.tar.gz"
+curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/claire-codex-v0.0.15.tar.gz"
 curl -LO "https://github.com/fofwisdom/claire-agents/releases/latest/download/SHA256SUMS"
 sha256sum -c SHA256SUMS --ignore-missing
 mkdir -p ~/.codex/skills ~/.codex/agents
-tar -xzf claire-codex-v0.0.14.tar.gz -C /tmp
+tar -xzf claire-codex-v0.0.15.tar.gz -C /tmp
 cp -r /tmp/claire/skills/claire ~/.codex/skills/claire
 cp /tmp/claire/agents/claire-extractor.toml ~/.codex/agents/claire-extractor.toml
 codex mcp add claire --url "https://<your-claire-server>/mcp"

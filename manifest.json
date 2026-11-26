@@ -6,13 +6,13 @@
       "files": [
         {
           "path": "README.md",
-          "sha256": "01b88c2903ac134da38dfad6402f7ea054eb9347639b78d4ba78f03579f7e3ad",
+          "sha256": "3dda2a9c5bca218f6e8e6f209585526b44e7f78e2d3ab81611fa0290356ef3c7",
           "size": 3576
         },
         {
           "path": "agents/claire-extractor.md",
-          "sha256": "ccace4880a658718c52030f84fbc06a3b37c28fdcf4edccfedbe4d635e93ea2a",
-          "size": 6912
+          "sha256": "2915d49cbc1edc1243d011cc9f0b990bc1c80c4208377c8cf4838e4c4eecebfb",
+          "size": 7376
         },
         {
           "path": "assets/logo.svg",
@@ -21,7 +21,7 @@
         },
         {
           "path": "plugin.json",
-          "sha256": "a6951c5afe6360aaf4cfd01ae33754cc7effb16dc6281eaf4131c78c14495869",
+          "sha256": "bad68894852531ec82a775e84090fbfab1853172f17c844cc6828bdfea4292c0",
           "size": 853
         },
         {
@@ -31,8 +31,8 @@
         },
         {
           "path": "skills/claire/SKILL.md",
-          "sha256": "f9479ea34ff8293e3628f5f5dc43ad181a91c796d7487526dd66353580840cc3",
-          "size": 16489
+          "sha256": "79895ab2e1d1f6cc1a7e396191e408bf89da1456579e343a289e33a0f7b74af8",
+          "size": 16878
         }
       ],
       "id": "claire-antigravity",
@@ -43,25 +43,25 @@
         "write"
       ],
       "target": "antigravity",
-      "version": "0.0.14"
+      "version": "0.0.15"
     },
     {
       "client_id": "claude",
       "files": [
         {
           "path": ".claude-plugin/plugin.json",
-          "sha256": "9ad69e09bc186b5b99c108410dc6ef88b3b512e68d8619eef83f720e0e70c884",
+          "sha256": "432462e209ba28b89362463fc1a24e420dd0b7f5d2a9fa17babb657323ad48cd",
           "size": 431
         },
         {
           "path": "README.md",
-          "sha256": "d8961b9e699c838a6f88a4a98dc5d943d2dcbd9f0bfd7120d29f6a93e2e245fd",
+          "sha256": "a5216720b2c207c4fa41f917fecf4a38b205f76f42f153a7398a21f57cdd4822",
           "size": 3279
         },
         {
           "path": "agents/extractor.md",
-          "sha256": "f5adc06e91d260dc4e170e75935867b016064f58d0489c4bc196beddbb855ae3",
-          "size": 6859
+          "sha256": "2b4ff634d2e5447e92fccf0d8ea51259600278a51d6f7863dc7382ac1ed9e3f1",
+          "size": 7323
         },
         {
           "path": "hooks/hooks.json",
@@ -75,8 +75,8 @@
         },
         {
           "path": "skills/ingest/SKILL.md",
-          "sha256": "f23912b224478dea7f91a807ad0b5d4d448da08bb1c44491de9354f24f957f17",
-          "size": 9924
+          "sha256": "13104bd7b6dfecdb960a69b569d5ebbaf780e2b1c83e8458ae1cc84be3301c8d",
+          "size": 10313
         },
         {
           "path": "skills/query/SKILL.md",
@@ -97,30 +97,30 @@
         "write"
       ],
       "target": "claude",
-      "version": "0.0.14"
+      "version": "0.0.15"
     },
     {
       "client_id": "codex",
       "files": [
         {
           "path": ".codex-plugin/plugin.json",
-          "sha256": "c78972fe8aabd0bf3c2088bc497302ae8e52a47765ef6810548a1b2c5f8a0737",
+          "sha256": "320ea00332f0c0dd09cee7b083951f200debaedcd4743af4913b773b40bbda7a",
           "size": 604
         },
         {
           "path": "README.md",
-          "sha256": "1f61a0d2b2d0e15915a2fe1fb716d66f228d82402f8ff23029126e8544505af5",
+          "sha256": "19c145fb9ab26ff696c2aca9e6f10e75acccf90f4e13da40ac353d04fd1651c5",
           "size": 3377
         },
         {
           "path": "agents/claire-extractor.md",
-          "sha256": "1e8591b0295fabba9ca1199b3dff36f8fdf791c87d49789bc17488ad784738c5",
-          "size": 6786
+          "sha256": "2289819ea82a106f62967d20c5488cb7085674efc03546e8197a25c032437570",
+          "size": 7250
         },
         {
           "path": "agents/claire-extractor.toml",
-          "sha256": "c42184d93385c67215a9037c32065a82f52a531745cfcbf4c76c49b9560c24ae",
-          "size": 6688
+          "sha256": "3ff7fb162e43049ab0069d8a3555ece3844b52316523a8549b9699648bd740fa",
+          "size": 7152
         },
         {
           "path": "rules/AGENTS.md",
@@ -129,8 +129,8 @@
         },
         {
           "path": "skills/claire/SKILL.md",
-          "sha256": "c02237ec56075999f7dd84d9ac1fcbc002535477a4291942dd0496f20ea038ef",
-          "size": 15936
+          "sha256": "20a1442b8de91af8e38fdd681f8439ed6dd73890e93eb3780805340d36d85013",
+          "size": 16325
         }
       ],
       "id": "claire-codex",
@@ -141,9 +141,9 @@
         "write"
       ],
       "target": "codex",
-      "version": "0.0.14"
+      "version": "0.0.15"
     }
   ],
   "repo": "fofwisdom/claire-agents",
-  "version": "0.0.14"
+  "version": "0.0.15"
 }

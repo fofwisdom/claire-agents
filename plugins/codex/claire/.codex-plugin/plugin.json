@@ -1,6 +1,6 @@
 {
   "name": "claire",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "ChatGPT (Codex) plugin providing the unified claire skill (ingest, regenerate, query subcommands) with an isolated claire-extractor subagent for your claire MCP server.",
   "author": {
     "name": "Claire Bible"
